@@ -1,0 +1,461 @@
+<section
+    class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll animation-engine-js loaded dzsprx-readyall"
+    data-options="{direction: &quot;normal&quot;}">
+    <!-- Apply your Parallax background image here -->
+    <div class="divimage dzsparallaxer--target"
+        style="height: 120%; opacity: 0.7; background-image: url(&quot;https://images.unsplash.com/photo-1628592102751-ba83b0314276?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2794&amp;q=80&quot;); transform: translate3d(0px, -100.214px, 0px);">
+    </div>
+    <!-- Content -->
+    <div class="container space-3">
+
+        <div class="text-center w-lg-100 mx-auto">
+            <span class="display-4 text-white">
+                Lancez votre projet dès aujourd'hui
+            </span>
+        </div>
+        <!-- WIZARD 🧙‍♂️ -->
+        <div class="text-center w-lg-50 mx-auto space-top-md-2">
+            <div class="card">
+                <div class="card card-frame  card-frame-style-primary">
+
+
+                    <div class="card-header bg-light py-4 px-5 px-md-6">
+                        <div class="row text-center">
+                            <div class="h5 col-12 text-primary mb-1">
+                                Estimer mon bien
+                            </div>
+                            <div class="h6 col-12 font-weight-semi-bold mb-0">
+                                En quelques clics, gratuit et sans engagement.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3 p-md-3">
+
+                        <!-- Estimation Form Container -->
+                        <div class="container">
+
+                            <form name="estimation" method="post" action="https://formspree.io/f/mvonogda"
+                                class="pop-estimation-form h-100 pop_fb_form" data-animate="true">
+                                <!-- Wizard Load spinner -->
+                                <!-- End Wizard Load spinner -->
+                                <!-- Wizard Progress Bar -->
+                                <div class="pw-progress progress " style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                                        role="progressbar" style="width: 17%; max-width: 100%;" aria-valuemin="0"
+                                        aria-valuemax="100" id="stepProgress"></div>
+                                </div>
+                                <!-- End Wizard Progress Bar -->
+                                <!-- Adresse -->
+                                <!-- Property Type Section -->
+                                <div id="contact1" class="pw-section form-section active" data-pw-disable="false">
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 pl-2 pr-4">
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    Quelle est l’adresse de votre bien ?
+                                                </span>
+                                            </h3>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 col-sm-12 mb-md-12">
+                                                    <div class="form-group" style="text-align: -webkit-auto;">
+                                                        <label class="form-label ml-1 required"
+                                                            for="estimation_Adresse">Adresse</label><input type="text"
+                                                            id="estimation_Adresse" name="estimation[Adresse]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Adresse">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 mb-md-12">
+                                                    <div class="form-group" style="text-align: -webkit-auto;">
+                                                        <label class="form-label ml-1 required"
+                                                            for="estimation_Ville">Ville</label><input type="text"
+                                                            id="estimation_Ville" name="estimation[Ville]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Ville">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 mb-md-12">
+                                                    <div class="form-group" style="text-align: -webkit-auto;">
+                                                        <label class="form-label ml-1 required"
+                                                            for="estimation_Gouvernorat">Gouvernorat</label><input
+                                                            type="text" id="estimation_Gouvernorat"
+                                                            name="estimation[Gouvernorat]" required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Gouvernorat">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-navigation row justify-content-around">
+                                        <div id="propertyTypeNext" class="col text-center">
+                                            <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
+                                                <i class="fa fa-arrow-right"></i>
+                                                Suivant
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Property Type Section -->
+                                <!-- Property Type Section -->
+                                <div id="propertyType" class="pw-section form-section d-none" data-pw-disable="false">
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 px-md-2 h-100">
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <!-- <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                </span> -->
+                                            </h3>
+                                            <div class="row h-100">
+                                                <div class="col-12 my-auto">
+                                                    <div id="estimation_propertyType"
+                                                        class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center"
+                                                        widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                        data-toggle="buttons"><label
+                                                            class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            for="estimation_propertyType_0"><input type="radio"
+                                                                name="estimation[propertyType]"
+                                                                id="estimation_propertyType_0" value="Maison"
+                                                                class="pw-jump form-check-input" data-target="nbRooms"
+                                                                icon="fas fa-home"><i class="fas fa-home"></i>
+                                                            Maison
+
+                                                        </label>
+                                                        <label
+                                                            class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            for="estimation_propertyType_1"><input type="radio"
+                                                                name="estimation[propertyType]"
+                                                                id="estimation_propertyType_1" value="Appartement"
+                                                                class="pw-jump form-check-input" data-target="nbRooms"
+                                                                icon="fas fa-building"><i class="fas fa-building"></i>
+                                                            Appartement
+
+                                                        </label>
+                                                        <label
+                                                            class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            for="estimation_propertyType_2"><input type="radio"
+                                                                name="estimation[propertyType]"
+                                                                id="estimation_propertyType_2" value="Terrain"
+                                                                class="pw-jump form-check-input"
+                                                                data-target="Superficie" icon="fas fa-store"><i
+                                                                class="fas fa-mountain"></i>
+                                                            Terrain
+
+                                                        </label>
+                                                        <label
+                                                            class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            for="estimation_propertyType_3"><input type="radio"
+                                                                name="estimation[propertyType]"
+                                                                id="estimation_propertyType_3" value="Local Commercial"
+                                                                class="pw-jump form-check-input"
+                                                                data-target="Superficie" icon="fas fa-store"><i
+                                                                class="fas fa-store"></i>
+                                                            Local Commercial
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-navigation row">
+                                            <div id="propertyTypePrevious" class="col text-left">
+                                                <button type="button"
+                                                    class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                    Retour
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Property Type Section -->
+                                <!-- Superficie Type Section -->
+                                <div id="Superficie" class="pw-section form-section d-none" data-pw-disable="false">
+
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 pl-2 pr-4">
+
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    Quelle est l’adresse de votre bien ?
+                                                </span>
+                                            </h3>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 col-sm-12 mb-md-12">
+                                                    <div class="form-group" style="text-align: -webkit-auto;">
+                                                        <label class="form-label ml-1 required"
+                                                            for="Superficie_id">Superficie</label><input type="text"
+                                                            id="Superficie_id" name="estimation[Superficie_id]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Superficie">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-navigation row">
+                                        <div id="SuperficiePrevious" class="col text-left">
+                                            <button type="button"
+                                                class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                <i class="fa fa-arrow-left"></i>
+                                                Retour
+                                            </button>
+                                        </div>
+                                        <div id="SuperficieNext" class="col text-right">
+                                            <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-jump"
+                                                data-target="fastline">
+                                                <i class="fa fa-arrow-right"></i>
+                                                Suivant
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    // Get the input element
+                                    var inputElement = document.getElementById("Superficie_id");
+
+                                    // Add an event listener for the keyup event
+                                    inputElement.addEventListener("input", function () {
+                                        // Get the current value of the input
+                                        var inputValue = inputElement.value;
+
+                                        // Use a regular expression to check if the input value is a number
+                                        var numberRegex = /^[0-9]*$/;
+                                        if (!numberRegex.test(inputValue)) {
+                                            // If the input value is not a number, remove the non-numeric characters
+                                            inputElement.value = inputValue.replace(/[^0-9]/g, "");
+                                        }
+                                    });
+                                </script>
+                                <!-- End Superficie Type Section -->
+                                <!-- Nb Rooms Section -->
+                                <div id="nbRooms" class="pw-section form-section d-none" data-pw-disable="false">
+
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 px-md-2 h-100">
+
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    Combien y'a t-il de chambres ?
+                                                </span>
+                                            </h3>
+                                            <div class="row h-100">
+                                                <div class="col-12 my-auto">
+                                                    <fieldset class="form-group">
+                                                        <div id="estimation_apiBedroomNb"
+                                                            class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center"
+                                                            widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            data-toggle="buttons"><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_apiBedroomNb_0"><input type="radio"
+                                                                    name="estimation[apiBedroomNb]"
+                                                                    id="estimation_apiBedroomNb_0" value="1"
+                                                                    class="pw-next form-check-input">
+
+                                                                Une chambre
+
+                                                            </label><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_apiBedroomNb_1"><input type="radio"
+                                                                    name="estimation[apiBedroomNb]"
+                                                                    id="estimation_apiBedroomNb_1" value="2"
+                                                                    class="pw-next form-check-input">
+
+                                                                Deux chambres
+
+                                                            </label><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_apiBedroomNb_2"><input type="radio"
+                                                                    name="estimation[apiBedroomNb]"
+                                                                    id="estimation_apiBedroomNb_2" value="3"
+                                                                    class="pw-next form-check-input">
+
+                                                                Trois chambres
+
+                                                            </label><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_apiBedroomNb_3"><input type="radio"
+                                                                    name="estimation[apiBedroomNb]"
+                                                                    id="estimation_apiBedroomNb_3" value="4"
+                                                                    class="pw-next form-check-input">
+
+                                                                Quatre chambres
+
+                                                            </label><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_apiBedroomNb_4"><input type="radio"
+                                                                    name="estimation[apiBedroomNb]"
+                                                                    id="estimation_apiBedroomNb_4" value="5"
+                                                                    class="pw-next form-check-input">
+
+                                                                Cinq chambres et plus
+
+                                                            </label></div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-navigation row">
+                                        <div id="nbRoomsPrevious" class="col text-left">
+                                            <button type="button"
+                                                class="pw-jump btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2"
+                                                data-target="propertyType">
+                                                <i class="fa fa-arrow-left"></i>
+                                                Retour
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Nb Rooms Section -->
+                                <!-- Fast Line Section -->
+                                <div id="fastline" class="pw-section form-section d-none h-100" data-pw-disable="false">
+
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 px-md-2 h-100">
+
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    Vous souhaitez ?
+                                                </span>
+                                            </h3>
+                                            <div class="row h-100">
+                                                <div class="col-12 my-auto">
+                                                    <fieldset class="form-group">
+                                                        <div id="estimation_fastline"
+                                                            class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center"
+                                                            widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                            data-toggle="buttons"><label
+                                                                class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
+                                                                for="estimation_fastline_0" style="
+                                                        border-radius: 0.3125rem;
+                                                    "><input type="radio" name=" estimation[esti. par un expert]"
+                                                                    id="estimation_fastline_0" value="1"
+                                                                    class="pw-jump form-check-input"
+                                                                    data-target="contact"><i
+                                                                    class="fad fa-user-tie"></i> &nbsp;
+                                                                <b>Estimation par un expert</b><br>
+                                                                <div class="pt-2 small"><i
+                                                                        class="fad fa-check-circle text-success"></i>
+                                                                    Réalisé par un agentIMOVA <br><i
+                                                                        class="fad fa-check-circle text-success"></i>
+                                                                    Estimation précise et complète </div>
+                                                            </label>
+                                                            <!-- <label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_fastline_1"><input type="radio" name=" estimation[esti. par un expert]" id="estimation_fastline_1" value="0" class="pw-next form-check-input"><i class="fad fa-user-robot"></i> &nbsp; <b>Estimation en ligne</b><br
+                                                                />
+                                                                <div class="pt-2 small"><i class="fad fa-check-circle text-success"></i> Réalisé par nos algorithmes <br /><i class="fad fa-check-circle text-success"></i> Estimation indicative </div>
+                                                                </label> -->
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-navigation row">
+                                        <div id="reasonPrevious" class="col text-left">
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2 pw-jump"
+                                                data-target="propertyType">
+                                                <i class="fa fa-arrow-left"></i>
+                                                Retour
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Reason Section -->
+                                <!-- Contact Section -->
+                                <div id="contact" class="pw-section form-section d-none">
+                                    <div class="js-form-message">
+                                        <div class="pb-2 mb-4 pl-2 pr-4">
+                                            <h3 class="h4 mt-4 text-center my-4">
+                                                <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    Recevez dès maintenant votre estimation réalisée par notre
+                                                    expert IMOVA !
+                                                </span>
+                                            </h3>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-6 col-sm-5 mb-md-3">
+                                                    <div class="form-group"><label class="form-label ml-1 required"
+                                                            for="estimation_lastname">Nom</label><input type="text"
+                                                            id="estimation_lastname" name="estimation[lastname]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Votre nom"></div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-5 mb-md-3">
+                                                    <div class="form-group"><label class="form-label ml-1 required"
+                                                            for="estimation_firstname">Prénom</label><input type="text"
+                                                            id="estimation_firstname" name="estimation[firstname]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Votre prénom"></div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-5 mb-md-3">
+                                                    <div class="form-group"><label class="form-label ml-1 required"
+                                                            for="estimation_email">Email</label>
+                                                        <div class="input-group input-group-pill"><input type="email"
+                                                                id="estimation_email" name="estimation[email]"
+                                                                required="required"
+                                                                class="form-control form-control-sm input-group-pill form-control"
+                                                                append_ico="fas fa-envelope"
+                                                                data-msg="Merci de saisir une adresse email valide"
+                                                                placeholder="Votre email">
+                                                            <div class="input-group-append"
+                                                                id="estimation_email_append">
+                                                                <span class="input-group-text">
+                                                                    <i class="fas fa-envelope"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-5 mb-md-3">
+                                                    <div class="form-group"><label class="form-label ml-1 required"
+                                                            for="estimation_phone">Téléphone</label><input type="text"
+                                                            id="estimation_phone" name="estimation[phone]"
+                                                            required="required"
+                                                            class="form-control form-control-sm input-group-pill form-control"
+                                                            placeholder="Votre téléphone"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-navigation row justify-content-around">
+                                        <!-- <div id="commodityPrevious" class="col-4 text-left ">
+                                            <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                <i class="fa fa-arrow-left"></i>
+                                                Retour
+                                            </button>
+                                        </div> -->
+                                        <div class="col-6 text-right">
+                                            <button
+                                                class="btn btn-block btn-primary btn-wide transition-3d-hover mb-md-2 pop_ga_event pop_gt_event pop_fb_form_event"
+                                                type="submit" data-ga-event="Submit Estimation Form"
+                                                data-ga-label="Envoi du Formulaire"
+                                                data-gt-send-to="AW-851910592/xtGlCIiip-EBEMC_nJYD"
+                                                data-fb-type="SubmitEstimationForm">
+                                                <i class="fa fa-arrow-right"></i>
+                                                Estimer mon bien </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Contact Section -->
+                                <input type="hidden" id="estimation_apiPropertyType"
+                                    name="estimation[apiPropertyType]"><input type="hidden"
+                                    id="estimation_googleClientId" name="estimation[googleClientId]"><input
+                                    type="hidden" id="estimation__token" name="estimation[_token]"
+                                    value="jjAeX0QAwxbIPm3j0Idjkqllj1yiBu3-njwSYkwxNB8">
+                            </form>
+                        </div>
+                        <!-- End Estimation Form Container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+</section>
