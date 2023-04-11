@@ -1,10 +1,4 @@
 plugins:
   - jekyll-multiple-languages-plugin
 
-languages:
-  - code: fr
-    name: Français
-  - code: en
-    name: English
-
-default_lang: fr
+languages : ["fr","en"]
