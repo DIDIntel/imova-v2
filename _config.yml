@@ -2,3 +2,5 @@ plugins:
   - jekyll-multiple-languages-plugin
 
 languages : ["fr","en","ar"]
+
+default_locale_in_subfolder: true
