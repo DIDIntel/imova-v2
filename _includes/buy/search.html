@@ -1,407 +1,78 @@
 <div class="bg-light">
     <div class="container space-1 mt-6">
-
         <form name="filter" method="post" id="filter_form" class="" data-mode="ImmoPop">
-            <div hx-get="https://imova-list.herokuapp.com/listings/search" hx-target="#list_properties" hx-trigger="load, click from:#search_submit" hx-include="select,input" class="">
-            </div>
-
-
-
             <div id="searchFormFilters2">
-
                 <div id="searchFilterCollapse" data-parent="#searchFormFilters2">
                     <div class="card bg-gray p-3 mt-2">
 
                         <div class="row">
 
                             <!-- Property State Selector -->
-                            <div hx-get="https://imova-list.herokuapp.com/listings/states" hx-trigger="load" hx-target="#states_options" hx-swap="outerHTML" class="">
+                            <div hx-get="https://imova-list.herokuapp.com/listings/states" hx-trigger="load"
+                                hx-target="#states_options" hx-swap="outerHTML" class="">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="js-focus-state">
                                     <i class="fas fa-fw fa-city text-primary"></i> &nbsp;
                                     <label class="" for="filter_states">Gouvernorat</label>
-                                    <div class="input-group input-group-pill">
-                                        <select id="filter_states" name="state" class="form-control select2 form-control select2-hidden-accessible" multiple="" data-select2-id="filter_states" tabindex="-1" aria-hidden="true">
-                                            <option value="2" class="">
-Nabeul
-</option>
-
-<option value="37" class="">
-Bizerte
-</option>
-
-<option value="39" class="">
-Sousse
-</option>
-
-<option value="40" class="">
-Grand Tunis
-</option>
-
-</select><span class="select2 select2-container select2-container--classic" dir="ltr" data-select2-id="1" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="form-group">
+                                        {% assign govs = site.data.gov %}
+                                        <select class="form-control selectpicker" data-live-search="true" name="gov">
+                                            {% for gov in govs %}
+                                            <option value="{{ gov.code }}">{{ gov.name }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
-
                                 </div>
-                            </div>
-                            <!-- End Property State Selector -->
-
-                            <!-- Property City Selector -->
-                            <div id="filter_cities_htmx" hx-get="https://imova-list.herokuapp.com/listings/cities" hx-trigger="load, citi" hx-include="#filter_states" hx-target="#filter_cities" hx-swap="innerHTML" class="">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="js-focus-state">
                                     <i class="fas fa-fw fa-city text-primary"></i> &nbsp;
-                                    <label class="" for="filter_cities">Villes</label>
-                                    <div class="input-group input-group-pill">
-                                        <select id="filter_cities" name="city" class="form-control select2 select2-hidden-accessible" multiple="" data-select2-id="filter_cities" tabindex="-1" aria-hidden="true"><option value="5">
-Korba
-</option>
-
-<option value="1">
-Nabeul
-</option>
-
-<option value="6">
-Hammamet
-</option>
-
-<option value="7">
-Beni Khalled
-</option>
-
-<option value="8">
-Beni Khiar
-</option>
-
-<option value="9">
-Dar Chaâbane Fehri
-</option>
-
-<option value="10">
-Haouaria
-</option>
-
-<option value="11">
-Grombalia
-</option>
-
-<option value="12">
-Kélibia
-</option>
-
-<option value="13">
-Soliman
-</option>
-
-<option value="14">
-Menzel Temim
-</option>
-
-<option value="15">
-Hamam Ghezèze
-</option>
-
-<option value="25">
-Ain Zaghouan
-</option>
-
-<option value="26">
-Aouina
-</option>
-
-<option value="27">
-Ariana
-</option>
-
-<option value="28">
-Ben Arous
-</option>
-
-<option value="29">
-Borj Cedria
-</option>
-
-<option value="30">
-Boumhel El-Bassatine
-</option>
-
-<option value="31">
-Carthage
-</option>
-
-<option value="32">
-Centre Urbain Nord
-</option>
-
-<option value="33">
-Cité El Khadra
-</option>
-
-<option value="34">
-El Menzah
-</option>
-
-<option value="35">
-El Mourouj
-</option>
-
-<option value="36">
-El Omrane
-</option>
-
-<option value="37">
-Ennasr
-</option>
-
-<option value="38">
-Ezzahra
-</option>
-
-<option value="39">
-Gammarth
-</option>
-
-<option value="40">
-Hammem Lif
-</option>
-
-<option value="41">
-Jardins d’el Menzah
-</option>
-
-<option value="42">
-Jardins de Carthage
-</option>
-
-<option value="43">
-La Goulette
-</option>
-
-<option value="44">
-Mannouba
-</option>
-
-<option value="45">
-La Marsa
-</option>
-
-<option value="46">
-La Soukra
-</option>
-
-<option value="47">
-Lafayette et Centre Ville
-</option>
-
-<option value="48">
-Le Bardo
-</option>
-
-<option value="49">
-Le Kram
-</option>
-
-<option value="50">
-Les Berges du Lac
-</option>
-
-<option value="51">
-Manar
-</option>
-
-<option value="52">
-Médina Jadida
-</option>
-
-<option value="53">
-Mégrine
-</option>
-
-<option value="54">
-Mornag
-</option>
-
-<option value="55">
-Mnihla
-</option>
-
-<option value="56">
-Mutuelle ville
-</option>
-
-<option value="57">
-Radés
-</option>
-
-<option value="58">
-Sidi Bou Said
-</option>
-
-<option value="59">
-Akouda
-</option>
-
-<option value="60">
-Chott Mariem
-</option>
-
-<option value="61">
-El Kantaoui
-</option>
-
-<option value="62">
-Hamam Sousse
-</option>
-
-<option value="63">
-Hergla
-</option>
-
-<option value="64">
-Kalâa Kebira
-</option>
-
-<option value="65">
-Kalâa Seghira
-</option>
-
-<option value="66">
-Khezama
-</option>
-
-<option value="67">
-Sahloul
-</option>
-
-<option value="68">
-Sousse Centre Ville
-</option>
-
-<option value="69">
-Sousse Riadh
-</option>
-
-<option value="70">
-Al Halfa
-</option>
-
-<option value="71">
-Cité El Wafa
-</option>
-
-</select><span class="select2 select2-container select2-container--classic" dir="ltr" data-select2-id="2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-
+                                    <label class="" for="filter_states">Villes</label>
+                                    <div class="form-group">
+                                        {% assign villes = site.data.ville %}
+                                        <select class="form-control selectpicker" data-live-search="true" name="gov">
+                                            {% for ville in villes %}
+                                            <option value="{{ ville.code }}">{{ ville.name }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                function waitForElm(selector) {
-                                    return new Promise(resolve => {
-                                        if (document.querySelector(selector)) {
-                                            return resolve(document.querySelector(selector));
-                                        }
-
-                                        const observer = new MutationObserver(mutations => {
-                                            if (document.querySelector(selector)) {
-                                                resolve(document.querySelector(selector));
-                                                observer.disconnect();
-                                            }
-                                        });
-
-                                        observer.observe(document.body, {
-                                            childList: true,
-                                            subtree: true
-                                        });
-                                    });
-                                }
-                                elementQuery = ".bg-gray > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > span:nth-child(2) > span:nth-child(1) > span:nth-child(1) > ul:nth-child(1)"
-
-                                waitForElm(elementQuery).then((elm) => {
-                                    filterState = document.querySelector(elementQuery);
-                                    // create a new instance of 'MutationObserver' named 'observer', 
-                                    // passing it a callback function
-                                    observer = new MutationObserver(function(mutationsList, observer) {
-                                        htmx.trigger("#filter_cities_htmx", "citi")
-                                        $("#filter_cities").select2({
-                                            theme: "classic",
-                                            width: "100%",
-                                            maximumSelectionLength: null
-                                        })
-                                    });
-
-                                    // call 'observe' on that MutationObserver instance, 
-                                    // passing it the element to observe, and the options object
-                                    observer.observe(filterState, {
-                                        characterData: false,
-                                        childList: true,
-                                        attributes: false
-                                    });
-
-                                });
-                            </script>
-                            <!-- End Property City Selector -->
                         </div>
 
 
 
                         <div class="row">
-                            <!-- Property Type Selector -->
-                            <div hx-get="https://imova-list.herokuapp.com/listings/types" hx-trigger="load" hx-target="#listing_types_options" hx-swap="outerHTML" class=""></div>
                             <div class="col-12 col-sm-6">
                                 <div class="js-focus-state">
                                     <i class="fas fa-fw fa-home text-primary"></i> &nbsp;
                                     <label class="" for="filter_type">Type de Bien</label>
-                                    <div class="input-group input-group-pill">
-                                        <select id="filter_type" name="listing_type" class="form-control select2 form-control select2-hidden-accessible" multiple="" data-select2-id="filter_type" tabindex="-1" aria-hidden="true">
-                                            <option value="2" class="">
-Maison
-</option>
-
-<option value="3" class="">
-Local commercial
-</option>
-
-<option value="4" class="">
-Terrain
-</option>
-
-<option value="5" class="">
-Appartement
-</option>
-
-<option value="6" class="">
-Terrain agricole
-</option>
-
-<option value="7" class="">
-Bureaux
-</option>
-
-</select><span class="select2 select2-container select2-container--classic" dir="ltr" data-select2-id="3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-
+                                    <div class="form-group">
+                                        {% assign types = site.data.type %}
+                                        <select class="form-control selectpicker" data-live-search="true" name="gov">
+                                            {% for type in types %}
+                                            <option value="{{ type.code }}">{{ type.name }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Property Type Selector -->
-                            <!-- BedRooms Selector -->
+                            
                             <div class="col-12 col-sm-6">
                                 <div>
                                     <i class="fas fa-fw fa-bed text-primary"></i> &nbsp;
                                     <label class="" for="filter_bedroom">Nombre de chambres</label>
-                                    <div class="input-group input-group-sm input-group-pill">
-                                        <select id="filter_bedroom" name="bedrooms" class="form-control select2 select2-hidden-accessible" multiple="" data-select2-id="filter_bedroom" tabindex="-1" aria-hidden="true">
-                                            <option value="1">Une chambre</option>
-                                            <option value="2">Deux chambres</option>
-                                            <option value="3">Trois chambres</option>
-                                            <option value="4">Quatre chambres</option>
-                                            <option value="5">Cinq chambres et plus</option>
-                                        </select><span class="select2 select2-container select2-container--classic" dir="ltr" data-select2-id="4" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="form-group">
+                                        {% assign rooms = site.data.room %}
+                                        <select class="form-control selectpicker" data-live-search="true" name="gov">
+                                            {% for room in rooms %}
+                                            <option value="{{ type.code }}">{{ room.name }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End BedRooms Selector -->
-
                         </div>
 
                         <div class="text-center mt-2 mb-2">
@@ -416,16 +87,19 @@ Bureaux
                                 <div class="form-group">
                                     <div class="text-center pb-2">
                                         <i class="fab fa-accessible-icon fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_disabledAccess">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_disabledAccess" name="filter[disabledAccess]" ico="fab fa-accessible-icon fa-2x text-primary">
+                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                        for="filter_disabledAccess">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_disabledAccess"
+                                            name="filter[disabledAccess]"
+                                            ico="fab fa-accessible-icon fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_disabledAccess">Accessibilité</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -437,16 +111,18 @@ Bureaux
                                 <div class="form-group">
                                     <div class="text-center pb-2">
                                         <i class="fas fa-house-leave fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_garden">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_garden" name="filter[garden]" ico="fas fa-house-leave fa-2x text-primary">
+                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                        for="filter_garden">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_garden"
+                                            name="filter[garden]" ico="fas fa-house-leave fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_garden">Jardin</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -458,16 +134,18 @@ Bureaux
                                 <div class="form-group">
                                     <div class="text-center pb-2">
                                         <i class="fad fa-garage-open fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_garage">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_garage" name="filter[garage]" ico="fad fa-garage-open fa-2x text-primary">
+                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                        for="filter_garage">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_garage"
+                                            name="filter[garage]" ico="fad fa-garage-open fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_garage">Garage</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -480,15 +158,16 @@ Bureaux
                                     <div class="text-center pb-2">
                                         <i class="fas fa-swimming-pool fa-2x text-primary"></i>
                                     </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_pool">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_pool" name="filter[pool]" ico="fas fa-swimming-pool fa-2x text-primary">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_pool"
+                                            name="filter[pool]" ico="fas fa-swimming-pool fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_pool">Piscine</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -500,16 +179,18 @@ Bureaux
                                 <div class="form-group">
                                     <div class="text-center pb-2">
                                         <i class="fad fa-coffee fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_balcony">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_balcony" name="filter[balcony]" ico="fad fa-coffee fa-2x text-primary">
+                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                        for="filter_balcony">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_balcony"
+                                            name="filter[balcony]" ico="fad fa-coffee fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_balcony">Balcon</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -521,16 +202,18 @@ Bureaux
                                 <div class="form-group">
                                     <div class="text-center pb-2">
                                         <i class="fas fa-house-night fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_terrace">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_terrace" name="filter[terrace]" ico="fas fa-house-night fa-2x text-primary">
+                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                        for="filter_terrace">
+                                        <input type="checkbox" class="toggle-switch-input" id="filter_terrace"
+                                            name="filter[terrace]" ico="fas fa-house-night fa-2x text-primary">
                                         <span class="toggle-switch-label">
                                             <span class="toggle-switch-indicator"></span>
                                         </span>
                                         <span class="toggle-switch-content">
                                             <span class="d-block text-center">
                                                 <label class="mb-0" for="filter_terrace">Terrasse</label>
-                                    </span>
-                                    </span>
+                                            </span>
+                                        </span>
 
                                     </label>
                                 </div>
@@ -551,7 +234,8 @@ Bureaux
                                                 <span class="fas fa-filter"></span>
                                             </span>
                                         </div>
-                                        <input type="text" id="filter_reference" name="reference" class="form-control form-control" placeholder="Référence">
+                                        <input type="text" id="filter_reference" name="reference"
+                                            class="form-control form-control" placeholder="Référence">
 
                                     </div>
                                 </div>
@@ -559,7 +243,8 @@ Bureaux
                             <!-- End Search by Ref -->
 
                         </div>
-                        <a id="search_submit" class="btn btn-soft-primary btn-sm transition-3d-hover ml-md-2 my-2 py-1 w-100 w-md-auto">
+                        <a id="search_submit"
+                            class="btn btn-soft-primary btn-sm transition-3d-hover ml-md-2 my-2 py-1 w-100 w-md-auto">
                             Recherche
                         </a>
                     </div>

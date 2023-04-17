@@ -1,56 +1,36 @@
-var TxtType = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
+document.addEventListener("DOMContentLoaded", function(event) {
+  // your code here
 
-TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+const text1 = "Sans Commission";
+const text2 = "\u00c0 Forfait Fixe de 3 900 TND";
 
-  if (this.isDeleting) {
-  this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-  this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+  // Set initial state of text container
+  const textContainer = document.getElementById("text-container");
+  document.getElementById("text-container").style.display = "inline-block";
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  // Define function to animate text
+  function animateText(text) {
+    let i = 0;
+    textContainer.innerHTML = "";
+    const cursor = document.createElement("span");
+    cursor.classList.add("cursor");
+    textContainer.appendChild(cursor);
 
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-  delta = this.period;
-  this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-  this.isDeleting = false;
-  this.loopNum++;
-  delta = 500;
-  }
-
-  setTimeout(function() {
-  that.tick();
-  }, delta);
-};
-
-window.onload = function() {
-  var elements = document.getElementsByClassName('typewrite');
-  for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period);
+    const intervalId = setInterval(function() {
+      if (i < text.length) {
+        textContainer.insertBefore(document.createTextNode(text.charAt(i)), cursor);
+        i++;
+      } else {
+        clearInterval(intervalId);
+        setTimeout(function() {
+          textContainer.style.display = "none";
+          animateText(text === text1 ? text2 : text1);
+          textContainer.style.display = "inline-block";
+        }, 2000);
       }
+    }, 100);
   }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
+
+  // Start the animation
+  animateText(text1);
+});

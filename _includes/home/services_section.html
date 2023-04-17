@@ -1,82 +1,32 @@
-<section class="position-relative z-index-2" style="
-        padding-top: 5%;
-        padding-bottom: 5%;
-    ">
-
+<section class="position-relative">
     <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
         <h2 class="h3 font-weight-medium">Services &amp; Tarifs</h2>
     </div>
     <div class="container">
-        <div class="">
+        <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 space-top-md-12 space-bottom-md-2 align-items-center h-100 order-2 order-md-1 align-items-center h-100">
+                    <div class="offset-lg-3 offset-md-3 col-6 col-lg-12 col-md-10 btn-group-toggle mb-5 nav ">
 
-            <div class="row" style="
-justify-content: space-around;
-">
-
-                <!-- Key Points -->
-                <div class="col-12 col-md-12 col-lg-12 space-top-md-12 space-bottom-md-2 align-items-center h-100 order-2 order-md-1 align-items-center h-100"
-                    style="
-display: contents;
-align-content: center;
-">
-                    <!-- Pricing Switch Button Group -->
-                    <!-- <div class="responsive-service btn-group btn-group-toggle mb-5"> -->
-                    <div class="offset-lg-3 offset-md-3 col-6 col-lg-12 col-md-10 btn-group-toggle mb-5">
-
-                        <a class="js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide active"
-                            href="javascript:;" data-hs-show-animation-options="{
-   &quot;targetSelector&quot;: &quot;#pricingNoVisits&quot;,
-    &quot;groupName&quot;: &quot;pricingVisitsSlider&quot;,
-    &quot;animationType&quot;: &quot;css-animation&quot;,
-    &quot;animationIn&quot;: &quot;slideInUp&quot;,
-    &quot;duration&quot;: 1000
-}" data-hs-show-animation-link-group="pricingVisitsSlider">
+                        <a class="mx-1 js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide active"
+                            href="#pricingNoVisits" data-bs-toggle="tab">
                             Maison &amp; Appartement
                         </a>
-
-                        <a class="js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
-                            href="javascript:;" data-hs-show-animation-options="{
-   &quot;targetSelector&quot;: &quot;#pricingWithVisits&quot;,
-   &quot;groupName&quot;: &quot;pricingVisitsSlider&quot;,
-   &quot;animationType&quot;: &quot;css-animation&quot;,
-   &quot;animationIn&quot;: &quot;slideInUp&quot;,
-   &quot;duration&quot;: 1000
-}" data-hs-show-animation-link-group="pricingVisitsSlider">
+                        <a class="mx-1 js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
+                            href="#pricingWithVisits" data-bs-toggle="tab">
                             Local Commercial
                         </a>
-                        <a class="js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
-                            href="javascript:;" data-hs-show-animation-options="{
-   &quot;targetSelector&quot;: &quot;#pricingWithVisits_TerrainAgricole&quot;,
-   &quot;groupName&quot;: &quot;pricingVisitsSlider&quot;,
-   &quot;animationType&quot;: &quot;css-animation&quot;,
-   &quot;animationIn&quot;: &quot;slideInUp&quot;,
-   &quot;duration&quot;: 1000
-}" data-hs-show-animation-link-group="pricingVisitsSlider">
+                        <a class="mx-1 js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
+                            href="#pricingWithVisits_TerrainAgricole" data-bs-toggle="tab">
                             Terrain Agricole
                         </a>
-                        <a class="js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
-                            href="javascript:;" data-hs-show-animation-options="{
-   &quot;targetSelector&quot;: &quot;#pricingWithVisits_TerrainConstructible&quot;,
-   &quot;groupName&quot;: &quot;pricingVisitsSlider&quot;,
-   &quot;animationType&quot;: &quot;css-animation&quot;,
-   &quot;animationIn&quot;: &quot;slideInUp&quot;,
-   &quot;duration&quot;: 1000
-}" data-hs-show-animation-link-group="pricingVisitsSlider">
+                        <a class="mx-1 js-animation-link btn btn-outline-secondary btn-custom-toggle-primary btn-sm-wide"
+                            href="#pricingWithVisits_TerrainConstructible" data-bs-toggle="tab">
                             Terrain Constructible
                         </a>
                     </div>
-
-
-
-                </div>
-
-                <div class="col-12 col-md-12 col-lg-12 order-1 order-md-2">
-
-
+                <div class=" tab-content col-12 col-md-12 col-lg-12 order-1 order-md-2">
                     <!-- MAISON & APPARTEMENT -->
-                    <div id="pricingNoVisits" class="mb-3 animated slideInUp" data-target-group="pricingVisitsSlider"
-                        data-hs-show-animation-target-group="pricingVisitsSlider"
-                        style="animation-duration: 1000ms; opacity: 1;">
+                    <div id="pricingNoVisits" class="tab-pane mb-3 active">
 
 
                         <div class="row">
@@ -90,7 +40,7 @@ align-content: center;
                                         </h2>
                                         <span class="col-12 d-block">
                                             <span class="display-4 text-dark font-weight-normal">3 900&nbsp;TND</span>
-                                            <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
+                                        <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
                                                 DISPONIBLE PARTOUT EN Tunisie</span>
                                         </span>
                                     </div>
@@ -148,55 +98,54 @@ align-content: center;
                                             </div>
                                         </div>
                                         <!-- <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                        <i class="fas fa-faw fa-check"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Qualification des acquéreurs et financement
-                                            </div>
-                                        </div>
-                                        <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                        <i class="fas fa-faw fa-check"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Négociation des offres
-                                            </div>
-                                        </div>
-                                        <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                        <i class="fas fa-faw fa-check"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Préparation du dossier notaire
-                                            </div>
-                                        </div>
-                                        <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                        <i class="fas fa-faw fa-check"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Paiement à la vente
-                                            </div>
-                                        </div>
-                                        <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                        <i class="fas fa-faw fa-check"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Un courtier dédié pour vos projets futurs
-                                            </div>
-                                        </div>
-                                        <div class="media mb-3">
-                                            <span class="icon icon-xs icon-soft-danger icon-circle mr-3">
-                                        <i class="fas fa-faw fa-times"></i>
-                                    </span>
-                                            <div class="media-body text-secondary">
-                                                Gestion des visites par IMOVA (en option) </div>
-                                        </div> -->
+                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                <i class="fas fa-faw fa-check"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Qualification des acquéreurs et financement
                                     </div>
-                                    <a href="estimation.html"
-                                        class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
+                                </div>
+                                <div class="media mb-3">
+                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                <i class="fas fa-faw fa-check"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Négociation des offres
+                                    </div>
+                                </div>
+                                <div class="media mb-3">
+                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                <i class="fas fa-faw fa-check"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Préparation du dossier notaire
+                                    </div>
+                                </div>
+                                <div class="media mb-3">
+                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                <i class="fas fa-faw fa-check"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Paiement à la vente
+                                    </div>
+                                </div>
+                                <div class="media mb-3">
+                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                <i class="fas fa-faw fa-check"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Un courtier dédié pour vos projets futurs
+                                    </div>
+                                </div>
+                                <div class="media mb-3">
+                                    <span class="icon icon-xs icon-soft-danger icon-circle mr-3">
+                                <i class="fas fa-faw fa-times"></i>
+                            </span>
+                                    <div class="media-body text-secondary">
+                                        Gestion des visites par IMOVA (en option) </div>
+                                </div> -->
+                                    </div>
+                                    <a href="estimation.html" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
                                         <span class="fas fa-paper-plane"></span> C'est parti !
                                     </a>
                                 </div>
@@ -214,7 +163,7 @@ align-content: center;
                                         <span class="col-12 d-block">
                                             <span class="display-4 text-dark font-weight-normal">
                                                 5 500&nbsp;TND</span>
-                                            <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
+                                        <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
                                                 DISPONIBLE PARTOUT EN Tunisie</span>
                                         </span>
                                     </div>
@@ -289,8 +238,7 @@ align-content: center;
                                         </div>
 
                                     </div>
-                                    <a href="estimation.html"
-                                        class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
+                                    <a href="estimation.html" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
                                         <span class="fas fa-paper-plane"></span> C'est parti !
                                     </a>
                                 </div>
@@ -300,16 +248,13 @@ align-content: center;
                         </div>
 
                     </div>
-
                     <!--  Local -->
-                    <div id="pricingWithVisits" class="mb-3" data-target-group="pricingVisitsSlider"
-                        style="opacity: 0; animation-duration: 1000ms; display: none;"
-                        data-hs-show-animation-target-group="pricingVisitsSlider">
+                    <div id="pricingWithVisits" class="mb-3 tab-pane">
 
 
                         <div class="row" style="
-                        justify-content: center;
-                    ">
+                justify-content: center;
+            ">
                             <!-- Pricing -->
                             <div class="col-lg-6 card transition-3d-hover mt-1">
                                 <!-- Header -->
@@ -321,7 +266,7 @@ align-content: center;
                                         <span class="col-12 d-block">
                                             <span class="display-4 text-dark font-weight-normal">5
                                                 500&nbsp;TND</span>
-                                            <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
+                                        <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
                                                 DISPONIBLE PARTOUT EN Tunisie</span>
                                         </span>
                                     </div>
@@ -397,8 +342,7 @@ align-content: center;
 
 
                                     </div>
-                                    <a href="estimation.html"
-                                        class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
+                                    <a href="estimation.html" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
                                         <span class="fas fa-paper-plane"></span> C'est parti !
                                     </a>
                                 </div>
@@ -408,16 +352,13 @@ align-content: center;
                         </div>
 
                     </div>
-
                     <!-- TERRAIN AGRICOLE -->
-                    <div id="pricingWithVisits_TerrainAgricole" class="mb-3" data-target-group="pricingVisitsSlider"
-                        style="opacity: 0; animation-duration: 1000ms; display: none;"
-                        data-hs-show-animation-target-group="pricingVisitsSlider">
+                    <div id="pricingWithVisits_TerrainAgricole" class="mb-3 tab-pane">
 
 
                         <div class="row" style="
-                        justify-content: center;
-                    ">
+                justify-content: center;
+            ">
                             <!-- Pricing -->
                             <div class="col-lg-6 card transition-3d-hover mt-1">
                                 <!-- Header -->
@@ -431,16 +372,16 @@ align-content: center;
                                             <div class="mb-4 ml-3 ">
                                                 <div class="media mb-3">
                                                     <!-- <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                                    <i class="fas fa-faw fa-check"></i>
-                                                                </span> -->
+                                                            <i class="fas fa-faw fa-check"></i>
+                                                        </span> -->
                                                     <div class="media-body text-secondary">
                                                         Moins de 4 Hectares = <strong><b>2 900 TND</b></strong>
                                                     </div>
                                                 </div>
                                                 <div class="media mb-3">
                                                     <!-- <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                                    <i class="fas fa-faw fa-check"></i>
-                                                                </span> -->
+                                                            <i class="fas fa-faw fa-check"></i>
+                                                        </span> -->
                                                     <div class="media-body text-secondary">
                                                         De 4ha jusqu'à 9 Hectares = <strong><b>3 900
                                                                 TND</b></strong>
@@ -448,8 +389,8 @@ align-content: center;
                                                 </div>
                                                 <div class="media mb-3">
                                                     <!-- <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                                    <i class="fas fa-faw fa-check"></i>
-                                                                </span> -->
+                                                            <i class="fas fa-faw fa-check"></i>
+                                                        </span> -->
                                                     <div class="media-body text-secondary">
                                                         De 9ha jusqu'à 14 Hectares = <strong><b>4 900
                                                                 TND</b></strong>
@@ -457,8 +398,8 @@ align-content: center;
                                                 </div>
                                                 <div class="media mb-3">
                                                     <!-- <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                                    <i class="fas fa-faw fa-check"></i>
-                                                                </span> -->
+                                                            <i class="fas fa-faw fa-check"></i>
+                                                        </span> -->
                                                     <div class="media-body text-secondary">
                                                         Plus de 14 Hectares = <strong><b>6 900 TND</b></strong>
                                                     </div>
@@ -471,10 +412,10 @@ align-content: center;
                                         <span class="col-12 d-block">
                                             <!-- <span class="display-4 text-dark font-weight-normal">
 
-                                                    </span> -->
+                                            </span> -->
 
 
-                                            <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
+                                        <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
                                                 DISPONIBLE PARTOUT EN Tunisie</span>
                                         </span>
 
@@ -506,13 +447,13 @@ align-content: center;
                                             </div>
                                         </div>
                                         <!-- <div class="media mb-3">
-                                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                        <i class="fas fa-faw fa-check"></i>
-                                                    </span>
-                                                    <div class="media-body text-secondary">
-                                                        Photos professionnelles
-                                                    </div>
-                                                </div> -->
+                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                                <i class="fas fa-faw fa-check"></i>
+                                            </span>
+                                            <div class="media-body text-secondary">
+                                                Photos professionnelles
+                                            </div>
+                                        </div> -->
                                         <div class="media mb-3">
                                             <span class="icon icon-xs icon-soft-success icon-circle mr-3">
                                                 <i class="fas fa-faw fa-check"></i>
@@ -555,8 +496,7 @@ align-content: center;
                                         </div>
 
                                     </div>
-                                    <a href="estimation.html"
-                                        class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
+                                    <a href="estimation.html" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
                                         <span class="fas fa-paper-plane"></span> C'est parti !
                                     </a>
                                 </div>
@@ -566,17 +506,13 @@ align-content: center;
                         </div>
 
                     </div>
-
                     <!-- TERRAIN Constructible -->
-                    <div id="pricingWithVisits_TerrainConstructible" class="mb-3"
-                        data-target-group="pricingVisitsSlider"
-                        style="opacity: 0; animation-duration: 1000ms; display: none;"
-                        data-hs-show-animation-target-group="pricingVisitsSlider">
+                    <div id="pricingWithVisits_TerrainConstructible" class="mb-3 tab-pane">
 
 
                         <div class="row" style="
-                        justify-content: center;
-                    ">
+                justify-content: center;
+            ">
                             <!-- Pricing -->
                             <div class="col-lg-6 card transition-3d-hover mt-1">
                                 <!-- Header -->
@@ -589,7 +525,7 @@ align-content: center;
                                             <span class="display-4 text-dark font-weight-normal"><strong>4
                                                     900</strong>
                                                 TND</span>
-                                            <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
+                                        <span class="d-block text-secondary font-size-1 text-capitalize">SERVICE
                                                 DISPONIBLE PARTOUT EN Tunisie</span>
                                         </span>
                                     </div>
@@ -615,13 +551,13 @@ align-content: center;
                                             </div>
                                         </div>
                                         <!-- <div class="media mb-3">
-                                                    <span class="icon icon-xs icon-soft-success icon-circle mr-3">
-                                                        <i class="fas fa-faw fa-check"></i>
-                                                    </span>
-                                                    <div class="media-body text-secondary">
-                                                        Photos professionnelles
-                                                    </div>
-                                                </div> -->
+                                            <span class="icon icon-xs icon-soft-success icon-circle mr-3">
+                                                <i class="fas fa-faw fa-check"></i>
+                                            </span>
+                                            <div class="media-body text-secondary">
+                                                Photos professionnelles
+                                            </div>
+                                        </div> -->
                                         <div class="media mb-3">
                                             <span class="icon icon-xs icon-soft-success icon-circle mr-3">
                                                 <i class="fas fa-faw fa-check"></i>
@@ -664,8 +600,7 @@ align-content: center;
                                         </div>
 
                                     </div>
-                                    <a href="estimation.html"
-                                        class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
+                                    <a href="estimation.html" class="btn btn-sm btn-block btn-soft-primary transition-3d-hover d-block d-md-none">
                                         <span class="fas fa-paper-plane"></span> C'est parti !
                                     </a>
                                 </div>
@@ -675,12 +610,8 @@ align-content: center;
                         </div>
 
                     </div>
-
                 </div>
-
-
             </div>
         </div>
-
     </div>
 </section>

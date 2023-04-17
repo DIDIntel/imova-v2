@@ -1,0 +1,8 @@
+- name: Deux chambres
+  code: 1
+- name: Trois chambres
+  code: 2
+- name: Quatre chambres
+  code: 3
+- name: Cinq chambres et plus
+  code: 4

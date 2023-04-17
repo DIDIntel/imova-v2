@@ -1,6 +1,24 @@
+# Set the base URL for your website. This should match the URL where your website will be hosted.
+baseurl: ""
+
+# Set the default language for your website.
+default_lang: fr
+
+# Enable the jekyll-multiple-languages-plugin.
 plugins:
   - jekyll-multiple-languages-plugin
 
-languages : ["fr","en","ar"]
+# Specify the languages you want to support.
+languages:
+  - fr
+  - en
+  - ar
 
-default_locale_in_subfolder: true
+# Specify the default locale for each language. This can be useful for formatting dates and times.
+# Replace "fr" with the appropriate language code for each language.
+locale:
+  fr: fr_FR.utf8
+  en: en_US.utf8
+  ar: ar_AR.utf8
+
+# Specify any other Jekyll configuration settings as needed.

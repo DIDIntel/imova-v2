@@ -1,0 +1,12 @@
+- name: Maison
+  code: 1
+- name: Local commercial
+  code: 2
+- name: Terrain
+  code: 3
+- name: Appartement
+  code: 4
+- name: Terrain agricole
+  code: 5
+- name: Bureaux
+  code: 6
