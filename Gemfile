@@ -2,6 +2,9 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
-gem "jekyll-multiple-languages-plugin","1.8.0"
+
+group :jekyll_plugins do
+    gem "jekyll"
+    gem "jekyll-feed", "~> 0.12"
+    gem "jekyll-multiple-languages-plugin"
+  end
