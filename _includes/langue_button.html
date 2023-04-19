@@ -1,7 +1,9 @@
+<div class="mx-4">
 {% for lang in site.languages %}
   {% if lang != site.lang %}
-    <a href="{{ site.url }}/{{ lang }}{{ page.url }}" class="btn btn-warning">{{ lang }}</a>
+    <a href="{{ site.url }}/{{ lang }}{{ page.url }}" class="btn btn-info">{{ lang }}</a>
     {% else %}
     <button class="btn btn-warning" disabled>{{ lang }}</button>
   {% endif %}
 {% endfor %}
+</div>
