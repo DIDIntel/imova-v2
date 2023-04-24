@@ -1,0 +1,94 @@
+---
+---
+
+// header
+$bg-blue: #051D40
+$bg-gray: #e7eaf3
+$base-color: #fbfdff
+$shadow-color: #87CEEB
+$button-color: #ffe4e2
+$nav-link-color: #677788
+$base-font-family: Poppins, Helvetica, Arial, sans-serif
+.logo
+  width: 8rem
+.header
+  background-color: $base-color
+  box-shadow: 0px 1px 10px $shadow-color
+
+#btn-estimation
+  background-color: $button-color
+  transition: all 0.3s ease
+  color: $bg-blue !important
+  padding-left: 20px
+  padding-right: 20px
+
+#btn-estimation:hover
+  transform: translateY(-6px)
+  background-color: $bg-blue
+  color: #ffffff !important
+
+#btn-estimation:active
+  transform: translateY(0px)
+
+.nav-link
+  font-family: $base-font-family !important
+  font-size: 1rem
+  font-weight: 300
+  line-height: 1.6
+  color: $nav-link-color !important
+
+.dropdown .dropdown-menu
+  border-top: 3px solid $bg-blue
+  border-radius: 0px !important
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out
+  opacity: 0
+  visibility: hidden
+  transform: translateY(-10px)
+
+.dropdown:hover .dropdown-menu
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)
+
+.cursor
+    display: inline-block
+    border-right: 0.2rem solid #333
+    animation: blink 0.7s infinite
+
+@keyframes blink 
+  50% 
+    border-color: transparent
+
+.button-estimation
+  background-color: $button-color !important
+  transition: all 0.3s ease
+  color: $bg-blue !important
+  padding-left: 20px
+  padding-right: 20px
+
+.button-estimation:hover
+  transform: translateY(-6px)
+  background-color: $bg-blue !important
+  color: #ffffff !important
+
+.button-estimation:active
+  transform: translateY(0px)
+
+.second_section_icon
+  max-width: 100px !important
+
+#icon22
+  width: 5%
+
+.icon-steps
+  width: 50px
+
+.bg-primary-2
+  background-color: $bg-blue !important
+
+.bg-soft-secondary
+  background-color: $bg-gray
+
+.btn-soft-primary-2
+  background-color: $button-color !important
+
