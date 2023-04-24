@@ -4,9 +4,9 @@ title: Service & Tarifs
 permalink: /services/
 ---
 
-<div id="SVGwave1BottomSMShape" class="position-relative bg-primary">
-    <div class="container space-top-2  space-bottom-4">
-        <div class="">
+<div id="SVGwave1BottomSMShape" class="position-relative">
+    <div class="container space-top-2  space-bottom-4 bg-soft-secondary bg-primary-2">
+        <div class="p-5">
             <div class="mb-6">
                 <div class="h1 text-white font-weight-semi-bold">
                     Services et Tarifs

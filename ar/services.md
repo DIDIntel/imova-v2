@@ -4,7 +4,7 @@ title: Service & Tarifs
 permalink: /services/
 ---
 
-<div id="SVGwave1BottomSMShape" class="position-relative bg-primary">
+<div id="SVGwave1BottomSMShape" class="position-relative bg-primary-2">
     <div class="container space-top-2  space-bottom-4">
         <div class="">
             <div class="mb-6">

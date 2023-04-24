@@ -4,10 +4,10 @@ title: Service & Tarifs
 permalink: /services/
 ---
 
-<div id="SVGwave1BottomSMShape" class="position-relative bg-primary">
-    <div class="container space-top-2  space-bottom-4">
-        <div class="">
-            <div class="mb-6">
+<div id="SVGwave1BottomSMShape" class="position-relative bg-primary-2">
+    <div class="services container space-top-2  space-bottom-4">
+        <div class=" p-5">
+            <div class="m-5 text-center">
                 <div class="h1 text-white font-weight-semi-bold">
                     Services et Tarifs
                 </div>
@@ -54,3 +54,7 @@ permalink: /services/
     </div>
     <!-- End SVG Background -->
 </div>
+
+{% include home/services_section.html %}
+
+{% include home/define_project_section.html %}
